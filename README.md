@@ -29,3 +29,17 @@
   ```
 
 - Open `index.html` in browser
+
+## 🧐 Preview
+
+<p align="center">
+ <img src="preview.png" alt="Title">
+</p>
+
+## 🤖 Features
+
+- Add note
+- Delete note
+- Delete all notes
+- Expand and collapse notes
+- Add notes to localstorage
