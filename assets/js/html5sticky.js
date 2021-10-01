@@ -41,7 +41,9 @@ html5sticky.addNote = function(){
     html5sticky.addPin(stickynote);
 
     $(stickynote).append($('<h2>' + dated + '</h2>'));
-    $(stickynote).append($('<p>Text here...</p>'));
+    //  $(stickynote).append($('<p>Text here...</p>'));
+    // adding placeholder
+    $(stickynote).append($('<p contentEditable=true data-text="Enter text here..."></p>'));
     // append identifier
     $(stickynote).append($('<span id="idf_' + nindex + '" />'));
 
@@ -236,7 +238,8 @@ html5sticky.getISODateTime = function(d){
 html5sticky.editNote = function($clone, el){
    var ptext = $clone.find('p').html();
    ptext = ptext.replace(/(<br \/>|<br>)/g, '\n');
-   $clone.find('p').replaceWith('<textarea class="pedit" />');
+   // adding placeholder
+   $clone.find('p').replaceWith('<textarea placeholder="Enter text here..." class="pedit" />');
 
    $clone.find('.pedit')
       .val(ptext)
@@ -316,7 +319,9 @@ html5sticky.getNotes = function(){
             html5sticky.addPin(stickynote);
 
             $(stickynote).append($('<h2>Sticky Note</h2>'));
-            $(stickynote).append($('<p>Text here...</p>'));
+            // $(stickynote).append($('<p>Text here...</p>'));
+            // adding placeholder
+            $(stickynote).append($('<p contentEditable=true data-text="Enter text here..."></p>'));
             // append identifier
             $(stickynote).append($('<span id="idf_' + i + 'stickynote' + '" />'));
 
